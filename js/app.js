@@ -121,6 +121,7 @@ function changeImage(index) {
 
 document.addEventListener('DOMContentLoaded', () => {
     const swiper = new Swiper('.swiper', {
+        spaceBetween: 10,
         loop: true,
         speed: 1000,
         autoplay: {
@@ -129,6 +130,19 @@ document.addEventListener('DOMContentLoaded', () => {
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const swiper = new Swiper('.swiper-skills', {
+        slidesPerView: 4,
+        slidesPerGroup: 1,
+        spaceBetween: 10,
+        loop: true,
+        speed: 1500,
+        autoplay: {
+            delay: 1000,
         }
     });
 });

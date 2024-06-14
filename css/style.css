@@ -586,12 +586,12 @@ body.open .hamburger .bar:last-child {
     
 }
 /*-------Skills Section Styling----------- */
-
-.skills{
+.skill {
     overflow: hidden;
 }
 
-.skills-box{
+.skills-box {
+    position: relative;
     background-color: var(--bg-color-2);
     padding: 5rem 6rem ;
     border-radius: 20px;
@@ -599,44 +599,71 @@ body.open .hamburger .bar:last-child {
     transition: 0.3s background-color;
 }
 
-.skills-boxs {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
-    column-gap: 10px;
-    row-gap: 30px;
-    user-select: none;
+.box-heading .heading {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
-.skills-boxs .box{
+.box-heading .sub-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.box-heading .box-desc .text {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.swiper-skills {
+    width: 100%;
+    overflow: hidden;
+    padding: 2rem 0;
+    box-sizing: border-box;
+}
+
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.swiper-slide {
     display: flex;
     flex-direction: column;
-    width: 100px;
-    height: 100px;
-    justify-content: center;
     align-items: center;
-    margin-top: 10px;
-    justify-self: center;
-    transition: 0.3s ease-in-out;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    gap: 1.2rem;
 
-    
 }
 
-.skills-boxs .box img{
-    max-width:  200px;
+.box {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.box:hover {
+    transform: scale(1.1);
+}
+
+.box img {
+    max-width: 100px;
     max-height: 100px;
-    
+    object-fit: contain;
 }
 
-.skills-boxs .box:hover{
-    transform:scale(1.2) ;
-    text-decoration: underline var(--main-color-1);
-}
-
-.skills-boxs .box h3{
+.box h3 {
     margin-top: 10px;
     color: var(--heading-color);
+    text-align: center;
 }
+
+
 
 /*-------Services Section Styling----------- */
 
