@@ -1,6 +1,5 @@
 /* --------------- Fonts used : Poppins + Abril Fatface --------------- */
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@300;400;500;600;700;800&display=swap");
-
 /* --------------- Website Theme --------------- */
 
 :root {
@@ -445,22 +444,59 @@ body.open .hamburger .bar:last-child {
     margin: 0.8rem 0;
 }
 
-.showcase-image {
+.card-container {
+    margin-left: 25%;
+    background-color: #231e39;
+    border-radius: 5px;
+    box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+    color: #b3b8cd;
+    padding-top: 30px;
     position: relative;
-    width: 100%;
-    min-height: calc(100% + 120px);
-    border-radius: 0 0 80px 80px;
-    background-image: linear-gradient(124deg, var(--main-color-1) 53%, var(--main-color-2) 53%);
-    margin-top: -120px;
+    width: 350px;
+    max-width: 100%;
+    text-align: center;
 }
 
-.showcase-image .person{
+.card-container .pro {
+    color: #231e39;
+    background-color: #febb0b;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 3px 7px;
     position: absolute;
-    width: 27rem;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 30px;
+    left: 30px;
+}
+
+.card-container .round {
+    border: 1px solid #03bfcb;
     border-radius: 50%;
+    padding: 7px;
+    width: 18rem;
+    height: 18rem;
+}
+
+.card-container .skills {
+    background-color: #1f1a36;
+    text-align: left;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+.card-container .skills ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.card-container .skills ul li {
+    border: 1px solid #2d2747;
+    border-radius: 2px;
+    display: inline-block;
+    font-size: 12px;
+    margin: 0 7px 7px 0;
+    padding: 7px;
 }
 
 .showcase-area .circle{
@@ -1304,8 +1340,12 @@ footer .social-media{
         padding: 100px 0;
     }
     .showcase-area .container{
+        margin: 10rem .5rem;
         grid-template-columns: 1fr 400px;
         height: 450px;
+    }
+    .card-container{
+        margin-left: 0;
     }
     .skills-box{
         padding: 4rem;
@@ -1460,7 +1500,11 @@ footer .social-media{
     body.open .links{
         opacity: 1;
     }
-
+    
+    .showcase-area {
+        display: grid;
+        justify-content: center;
+    }
     .showcase-area .container{
         grid-template-columns: 1fr;
         height: revert;
@@ -1468,18 +1512,11 @@ footer .social-media{
         row-gap: 4rem;
     }
 
-    .showcase-image{
-        min-height: revert;
-        height: 100vw;
-        max-height: 570px;
-        max-width: 450px;
-        margin-top: 0;
-        border-radius: 40px;
+    .card-container {
+        margin: 0;
+        order: 1;
     }
 
-    .showcase-info {
-        
-    }
     .showcase-area .text{
         margin: 0.2rem 0;
     }
@@ -1654,10 +1691,11 @@ footer .social-media{
 
 @media screen and (max-width: 500px){
     html{
-        width: fit-content
+        width: 500px;
     }
     .container{
         padding: 0 1.5rem;
+        width: 500px;
     }
     .text{
         line-height: 1.6;
@@ -1698,7 +1736,7 @@ footer .social-media{
     }
 
     .showcase-area{
-        padding: 100px 0 0;
+        padding: 0 ;
     }
     .showcase-area .container{
         row-gap: 4.5rem;
@@ -1707,13 +1745,16 @@ footer .social-media{
     .showcase-area .heading{
         font-size: 2.4rem;
     }
-    
+    .skill .container{
+        width: 500px;
+    }
     .skills-boxs{
         grid-template-columns: 1fr;
         row-gap: 20px;
     }
     .skills-boxs .box{
         margin: 2rem 0;
+        width: 100%;
     }
     .skills-boxs .box:hover{
         transform: none;
