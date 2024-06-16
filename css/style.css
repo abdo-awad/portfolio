@@ -688,8 +688,8 @@ body.open .hamburger .bar:last-child {
 }
 
 .box img {
-    max-width: 100px;
-    max-height: 100px;
+    width: 100px;
+    height: 100px;
     object-fit: contain;
 }
 
